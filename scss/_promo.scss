@@ -1,0 +1,142 @@
+.hero {
+    position: relative;
+    @include flex-center;
+    background-color: $primary-color;
+    padding: 80px;
+  
+    
+    .content-hero {
+        max-width: 500px;
+        flex-direction: column;
+        text-align: left;
+      h1 {
+        font-size: 70px;
+      }
+
+      h1 span{
+        font-size: 30px;
+      }
+      
+      .btn-order {
+        @include button-style($secondary-color);
+        padding: 16px 96px;
+        margin-top: $margin;
+        color: $text-color-white;
+        box-shadow: 4px 4px 2px 1px rgb(0, 0, 0);
+      }
+    }
+    
+    .image {
+      position: absolute;
+      right: 25%;
+      bottom: 0;
+      max-width: 40%;
+      z-index: 1;
+      
+      img {
+        width: 100%;
+        max-height: 608px;
+      }
+    }
+    .image-two{
+      position: absolute;
+      right: 5%;
+      top: 10%;
+      bottom: 0;
+      max-width: 40%;
+      z-index: 0;
+      
+      img {
+        width: 100%;
+        max-height: 608px;
+      }
+    }
+  }
+  
+  .features {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    
+    .feature-item {
+      display: flex;
+      text-align: left;
+      padding: $margin;
+
+      img{
+        padding-right: 10px;
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header, .hero {
+      flex-direction: column;
+
+      .image-two{
+        display: none;
+      }
+
+      .features{
+        display: none;
+      }
+
+      .image img{
+       display: none;
+      }
+
+    
+    }
+    
+    .features {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .hero {
+      .image {
+        position: static;
+        margin-top: $margin;
+        max-width: 60%;
+      }
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .hero {
+      padding: 10px;
+      .content-hero{
+        text-align: center;
+        h1{
+          font-size: 28px;
+          color: #333333;
+        }
+        .hero-span{
+          font-size: 18px;
+          color: #333333;
+        }
+      }
+     
+      .image {
+        position: relative;
+        max-width: 80%;
+        left: 40px;
+        bottom: 45px;
+      }
+      .btn-order{
+        position: absolute;
+        left: 30px;
+        bottom: 20px;
+        z-index: 2;
+      }
+
+      .image-two{
+        display: none;
+      }
+
+      .features{
+        display: none;
+      }
+    }
+  }
+  

@@ -1,0 +1,168 @@
+.three-box-card {
+    max-width: 1106px;
+    margin: 0 auto;
+
+    h2{
+        text-align: center;
+        padding: 90px 0 60px 0;
+    }
+    .step-number{
+        float: left;
+        font-size: 50px;
+    }
+    .three-box-content{
+        display: flex;
+    }
+
+    .step-description{
+        display: flex;
+        flex-direction: column;
+        padding: 0 42px;
+
+        .step-title{
+            font-size: 20px;
+            color: #333333;
+            padding-bottom: 15px;
+        }
+        .step-sub-title{
+            font-size: 16px;
+            color: #333333;
+        }
+    }
+
+    .step-number{
+        color: #fcfcfc;
+    }
+    ol {
+      list-style: none;
+      counter-reset: my-awesome-counter;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+      
+    }
+    ol li {
+      counter-increment: my-awesome-counter;
+      width: 50%;
+      font-size: 0.8rem;
+      margin-bottom: 0.5rem;
+    }
+    ol li::before {
+      position: relative;
+      content: "0" counter(my-awesome-counter);
+      font-weight: 300;
+      font-size: 50px;
+      top: 40%;
+      left: 0%;
+      text-shadow: 2px 1px 0px rgb(255 215 0);
+    }
+    
+    ol li:hover {
+      color: #ffd700;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .three-box-card h2 {
+      padding: 60px 0 40px 0;
+    }
+  
+    .three-box-content {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .step-description {
+      padding: 0 20px;
+      text-align: center;
+    }
+  
+    ol li {
+      width: 100%;
+    }
+  
+    .three-box-card ol li::before {
+      top: 23%;
+      left: 40%;  
+  }
+  }
+  
+  @media (max-width: 480px) {
+    .three-box-card h2 {
+      padding: 40px 0 30px 0;
+    }
+  
+    .step-number {
+      font-size: 40px;
+    }
+  
+    .step-title {
+      font-size: 18px;
+    }
+  
+    .step-sub-title {
+      font-size: 14px;
+    }
+  
+    .step-description {
+      padding: 0 10px;
+    }
+  
+    ol li::before {
+      font-size: 40px;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .three-box-card h2 {
+      padding: 30px 0 20px 0;
+    }
+  .three-box-content{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+   .three-box-card ol{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start
+   }
+
+   .step-sub-title{
+    display: none;
+   }
+
+   .three-box-li li{
+    text-align: left;
+    width: 250px;
+   }
+   .step-title{
+    max-width: 100%;
+    padding-left: 2px;
+   }
+
+   .three-box-card ol li {
+    width: 100%;
+    padding-left: 10px;
+   }
+
+   .three-box-card ol li::before{
+    bottom: -54px;
+   }
+
+   .step-description{
+    padding: 0 32px;
+   }
+
+   .summ p{
+    display: none;
+   }
+   .summ-box-card{
+    display: none;
+    padding-top: 0;
+   }
+   
+  }

@@ -1,0 +1,23 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @mixin responsive-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  @mixin button-style($bg-color) {
+    background-color: $bg-color;
+    color: $text-color;
+    padding: $padding;
+    border: none;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+  

@@ -1,0 +1,87 @@
+.summ{
+    text-align: center;
+    h4{
+        font-size: 25px;
+        line-height: 36.57px;
+        padding-bottom: 15px;
+        padding-top: 65px;
+    }
+
+    p{
+        font-size: 24px;
+        line-height: 29.26px;
+    }
+    .flex-summ-box{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .summ-box-cards{
+            padding-top: 60px;
+            max-width: 416px;
+            height: auto;
+
+       
+            .summ-box-content{
+                max-width: 238px;
+                padding: 84px 70px 0 89px; 
+                display: flex;
+                flex-direction: column;
+
+                h3{
+                    font-size: 23px;
+                    padding-bottom: 61px;
+                    white-space: nowrap;
+                }
+
+                .sum-span-two{
+                    padding: 20px;
+                }
+
+                h2{
+                    padding-top: 64px;
+                    font-size: 30px;
+                    font-weight: 600;
+                }
+                
+                .summ-btn{
+                    background-color: #FED100;
+                    padding: 12px 79px;
+                    margin-top: 54px;
+                    margin-bottom: 174px;
+                    border: none;
+                    font-size: 20px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.sum-span{
+    padding: 20px 0;
+}
+
+.summ-box-content:hover{
+    border: 1px solid #FED100;
+}
+
+
+@media (max-width: 768px) {
+    .summ{
+        .flex-summ-box{
+            flex-direction: column;
+
+            .summ-box-cards{
+
+                .summ-box-content{
+                    padding: 0px 40px 0 40px;
+                }
+            }
+        }
+
+        .summ-box-card{
+            display: none;
+        }
+    }
+  }
